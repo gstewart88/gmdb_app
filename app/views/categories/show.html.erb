@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @category.name %></h2>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+
+<p>
+  <strong>Movies:</strong><br>
+  <% @category.movies.each do |movie| %>
+    <%= movie.title %><br>
+  <% end %>
+</p>

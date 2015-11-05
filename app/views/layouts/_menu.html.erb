@@ -1,0 +1,20 @@
+<p>
+  <% if user_signed_in? %>
+    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'login', new_user_session_path %>
+    <%= link_to 'register', new_user_registration_path %>
+  <% end %>
+</p>
+</p>
+  <div class="container">
+  <div class="row">
+    <div class="twelve columns">
+      <nav>
+        <ul>
+          <li class ="nav"><a><%= link_to('Categories', categories_path) %></a></li>
+          <li class ="nav"><a><%= link_to('Movies', movies_path) %></a></li>
+        </ul>
+      </nav>  
+    </div> 
+  </div>

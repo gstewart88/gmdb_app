@@ -1,0 +1,20 @@
+  <%= form_for @movie do |f| %>
+  <%= f.label :title, 'Movie Title:' %>
+  <%= f.text_field :title %>
+  <br>
+  <br>
+  <%= f.label :review %>
+  <%= f.text_field :review %>
+  <br>
+  <br>
+  <%= f.label :category_id %>
+  <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] } %>
+  <br>
+  <br>
+  <div class="field">
+  <%= f.label :movie_image %><br />
+  <%= f.file_field :movie_image %>    
+  </div>
+  <%= f.submit button_text %>
+<% end %>
+

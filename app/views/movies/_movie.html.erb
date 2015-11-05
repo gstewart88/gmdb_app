@@ -1,0 +1,10 @@
+<nav class ="box">
+  <ul>
+    <li><%= movie.title %></li>
+    <li> <%= link_to image_tag(movie.movie_image.thumb.url), movie.movie_image.medium.url %></li>
+    <li><%= link_to("Show #{movie.title}", movie_path(movie)) %></li>
+    <li><%= link_to("Edit Movie", edit_movie_path(movie)) %></li>
+    <li><%= button_to('Delete Movie', movie_path(movie), method: :delete, data:{confirm: "Delete Them? Are you sure?"}) %></li>
+    
+  </ul>
+</nav>
